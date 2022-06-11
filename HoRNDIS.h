@@ -26,6 +26,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
+//#define __PRIVATE_SPI__
+//#define IFQ_MAXLEN    256
 
 #include <machine/limits.h>			/* UINT_MAX */
 #include <libkern/OSByteOrder.h>
@@ -33,6 +35,10 @@
 
 #include <IOKit/network/IOEthernetController.h>
 #include <IOKit/network/IOEthernetInterface.h>
+
+//#include "Apple Headers/IOEthernetInterface.h"
+//#include "Apple Headers/IOEthernetController.h"
+//#include "Apple Headers/IONetworkInterface.h"
 
 #include <IOKit/IOTimerEventSource.h>
 #include <IOKit/assert.h>
@@ -362,6 +368,15 @@ public:
 	                                  UInt32             count) override;
 	virtual IOReturn setPromiscuousMode(bool active) override;
 	virtual UInt32 outputPacket(mbuf_t pkt, void *param) override;
+
+	virtual bool setLinkStatus(
+                                UInt32                  status,
+                                const IONetworkMedium * activeMedium = 0,
+                                UInt64                  speed        = 0,
+                                OSData *                data         = 0) override;
+	#ifdef __PRIVATE_SPI__
+		virtual IOReturn outputStart(IONetworkInterface *interface, IOOptionBits options) override;
+	#endif
 };
 
 class HoRNDISInterface : public IOEthernetInterface {

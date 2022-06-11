@@ -132,6 +132,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 42BCD8991645AFC500683BF7;
@@ -240,6 +241,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,8 +298,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-Wno-inconsistent-missing-override";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				SDKROOT = macosx10.11;
@@ -315,10 +321,14 @@
 				GCC_PREFIX_HEADER = "HoRNDIS-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "HoRNDIS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MODULE_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				MODULE_VERSION = 9.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joshuawise.kexts.HoRNDIS;
+				OTHER_LDFLAGS = "-lkmod";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.tomheaven.kexts.HoRNDIS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -334,10 +344,14 @@
 				GCC_PREFIX_HEADER = "HoRNDIS-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "HoRNDIS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MODULE_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				MODULE_VERSION = 9.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joshuawise.kexts.HoRNDIS;
+				OTHER_LDFLAGS = "-lkmod";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.tomheaven.kexts.HoRNDIS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Release;

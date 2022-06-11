@@ -29,7 +29,6 @@
 
 #include "HoRNDIS.h"
 
-#include <mach/kmod.h>
 #include <libkern/version.h>
 #include <IOKit/IOKitKeys.h>
 
@@ -971,9 +970,49 @@ bool HoRNDIS::configureInterface(IONetworkInterface *netif) {
 	}
 	
 	LOG(V_PTR, "fpNetStats: %p", fpNetStats);
+
+	#ifdef __PRIVATE_SPI__
+	    fpNetStats->collisions = 0;
+		netif->configureOutputPullModel(IFQ_MAXLEN, kIONetworkWorkLoopSynchronous); 
+ 	#endif
 	
 	return true;
 }
+
+#ifdef __PRIVATE_SPI__
+IOReturn HoRNDIS::outputStart(IONetworkInterface *interface, IOOptionBits options)
+{
+    mbuf_t m = NULL;
+    while (interface->dequeueOutputPackets(1, &m, NULL, NULL, NULL) == kIOReturnSuccess) {
+        IOReturn ret = this->outputPacket(m, NULL);
+        if (ret != kIOReturnSuccess) {
+            return ret;
+        }
+    }
+
+    return kIOReturnNoResources;
+}
+#endif
+
+bool HoRNDIS::
+setLinkStatus(UInt32 status, const IONetworkMedium * activeMedium, UInt64 speed, OSData * data)
+{
+	bool ret = super::setLinkStatus(status, activeMedium, speed, data);
+	if (fNetworkInterface) {
+		if (status & kIONetworkLinkActive) {
+#ifdef __PRIVATE_SPI__
+			fNetworkInterface->startOutputThread();
+#endif
+		} else if (!(status & kIONetworkLinkNoNetworkChange)) {
+#ifdef __PRIVATE_SPI__
+			fNetworkInterface->stopOutputThread();
+			fNetworkInterface->flushOutputQueue();
+#endif
+		}
+	}
+	return ret;
+}
+
 
 
 /***** All-purpose IOKit network routines *****/
