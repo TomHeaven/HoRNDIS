@@ -6,6 +6,7 @@
 For more information, [visit the home page for HoRNDIS](http://www.joshuawise.com/horndis).
 
 ## About this Repo
++ 【2022.06.12】Add support fo M1 Mac; multiple fixes.
 + 【2022.06.12】Fix Download speed monitor for macOS 11+.
 
 
