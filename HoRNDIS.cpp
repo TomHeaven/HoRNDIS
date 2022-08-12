@@ -419,6 +419,7 @@ bool HoRNDIS::openUSBInterfaces(IOService *provider) {
 					desc->bInterfaceClass, desc->bInterfaceSubClass,
 					desc->bInterfaceProtocol);
 				if (!iface->open(this)) {
+					OSSafeReleaseNULL(iterator);
 					LOG(V_ERROR, "Could not open RNDIS control interface");
 					return false;
 				}
@@ -431,6 +432,7 @@ bool HoRNDIS::openUSBInterfaces(IOService *provider) {
 					desc->bInterfaceClass, desc->bInterfaceSubClass,
 					desc->bInterfaceProtocol);
 				if (!iface->open(this)) {
+					OSSafeReleaseNULL(iterator);
 					LOG(V_ERROR, "Could not open RNDIS data interface");
 					return false;
 				}

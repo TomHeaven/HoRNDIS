@@ -3,22 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42BCD8B01645AFC500683BF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42BCD8AE1645AFC500683BF7 /* InfoPlist.strings */; };
 		42BCD8B31645AFC500683BF7 /* HoRNDIS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42BCD8B21645AFC500683BF7 /* HoRNDIS.cpp */; };
+		4933A6EC28A6158F0075A835 /* Supporting Files in Resources */ = {isa = PBXBuildFile; fileRef = 4933A6EB28A6158F0075A835 /* Supporting Files */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42BCD8A61645AFC500683BF7 /* HoRNDIS.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoRNDIS.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		42BCD8AA1645AFC500683BF7 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
-		42BCD8AD1645AFC500683BF7 /* HoRNDIS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HoRNDIS-Info.plist"; sourceTree = SOURCE_ROOT; };
-		42BCD8AF1645AFC500683BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42BCD8AA1645AFC500683BF7 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
 		42BCD8B11645AFC500683BF7 /* HoRNDIS.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = HoRNDIS.h; sourceTree = SOURCE_ROOT; tabWidth = 4; };
 		42BCD8B21645AFC500683BF7 /* HoRNDIS.cpp */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HoRNDIS.cpp; sourceTree = SOURCE_ROOT; tabWidth = 4; };
-		42BCD8B41645AFC500683BF7 /* HoRNDIS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HoRNDIS-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		4933A6EB28A6158F0075A835 /* Supporting Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Supporting Files"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +33,9 @@
 		42BCD8991645AFC500683BF7 = {
 			isa = PBXGroup;
 			children = (
-				42BCD8AB1645AFC500683BF7 /* HoRNDIS */,
+				4933A6EB28A6158F0075A835 /* Supporting Files */,
+				42BCD8B11645AFC500683BF7 /* HoRNDIS.h */,
+				42BCD8B21645AFC500683BF7 /* HoRNDIS.cpp */,
 				42BCD8A81645AFC500683BF7 /* Frameworks */,
 				42BCD8A71645AFC500683BF7 /* Products */,
 			);
@@ -64,26 +64,6 @@
 				42BCD8AA1645AFC500683BF7 /* Kernel.framework */,
 			);
 			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		42BCD8AB1645AFC500683BF7 /* HoRNDIS */ = {
-			isa = PBXGroup;
-			children = (
-				42BCD8B11645AFC500683BF7 /* HoRNDIS.h */,
-				42BCD8B21645AFC500683BF7 /* HoRNDIS.cpp */,
-				42BCD8AC1645AFC500683BF7 /* Supporting Files */,
-			);
-			path = HoRNDIS;
-			sourceTree = "<group>";
-		};
-		42BCD8AC1645AFC500683BF7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				42BCD8AD1645AFC500683BF7 /* HoRNDIS-Info.plist */,
-				42BCD8AE1645AFC500683BF7 /* InfoPlist.strings */,
-				42BCD8B41645AFC500683BF7 /* HoRNDIS-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,16 +104,16 @@
 		42BCD89B1645AFC500683BF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Joshua Wise";
 			};
 			buildConfigurationList = 42BCD89E1645AFC500683BF7 /* Build configuration list for PBXProject "HoRNDIS" */;
-			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 42BCD8991645AFC500683BF7;
 			productRefGroup = 42BCD8A71645AFC500683BF7 /* Products */;
@@ -150,7 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42BCD8B01645AFC500683BF7 /* InfoPlist.strings in Resources */,
+				4933A6EC28A6158F0075A835 /* Supporting Files in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,33 +157,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		42BCD8AE1645AFC500683BF7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42BCD8AF1645AFC500683BF7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = SOURCE_ROOT;
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		42BCD8B51645AFC500683BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -244,11 +220,11 @@
 				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-Wno-inconsistent-missing-override";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
 				SYMROOT = "${SRCROOT}/build";
 			};
 			name = Debug;
@@ -257,17 +233,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -277,6 +260,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
@@ -301,11 +285,11 @@
 				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-Wno-inconsistent-missing-override";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
 				SYMROOT = "${SRCROOT}/build";
 			};
 			name = Release;
@@ -313,21 +297,29 @@
 		42BCD8B81645AFC500683BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "$(CODE_SIGN_$(USER))";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_DIVIDE_BY_ZERO = NO;
+				CLANG_ANALYZER_NULL_DEREFERENCE = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_iakhiaev = "Mac Developer: mikhailai@gmail.com (74ZR97MLB5)";
 				CODE_SIGN_joshua = "Developer ID Application: Joshua Wise (54GTJ2AU36)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 9.3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HoRNDIS-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/HoRNDIS-Prefix.pch";
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "HoRNDIS-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				INFOPLIST_FILE = "Supporting Files/HoRNDIS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64_arm64e";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 9.3;
 				MODULE_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";
-				MODULE_VERSION = 9.2;
+				MODULE_VERSION = 9.3;
 				OTHER_LDFLAGS = "-lkmod";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.tomheaven.kexts.HoRNDIS;
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshuawise.kexts.HoRNDIS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -336,21 +328,26 @@
 		42BCD8B91645AFC500683BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "$(CODE_SIGN_$(USER))";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_iakhiaev = "Mac Developer: mikhailai@gmail.com (74ZR97MLB5)";
 				CODE_SIGN_joshua = "Developer ID Application: Joshua Wise (54GTJ2AU36)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 9.3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HoRNDIS-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/HoRNDIS-Prefix.pch";
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "HoRNDIS-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				INFOPLIST_FILE = "Supporting Files/HoRNDIS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64_arm64e";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 9.3;
 				MODULE_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";
-				MODULE_VERSION = 9.2;
+				MODULE_VERSION = 9.3;
 				OTHER_LDFLAGS = "-lkmod";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.tomheaven.kexts.HoRNDIS;
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshuawise.kexts.HoRNDIS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
